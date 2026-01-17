@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -83,6 +85,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/_data/skills.json
+          git add -f docs/_data/skills.json
           git diff --staged --quiet || git commit -m "Update skills catalog [skip ci]"
           git push

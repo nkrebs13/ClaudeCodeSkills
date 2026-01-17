@@ -74,8 +74,3 @@ docs/.jekyll-metadata
 *.log
 *.tmp
 *.temp
-
-# Generated files
-docs/_data/skills.json
-docs/_skills/*.md
-!docs/_skills/.gitkeep
