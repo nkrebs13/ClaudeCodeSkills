@@ -1,0 +1,60 @@
+{
+  "generated": true,
+  "count": 6,
+  "skills": [
+    {
+      "name": "asset-gen",
+      "description": "This skill should be used when generating app icons, splash screens, store assets, or marketing materials using the Gemini API. It applies when the user needs to create visual assets for Android or iOS projects, with support for iterative refinement, AI-powered evaluation, style extraction from existing projects, and automatic deployment to project directories.",
+      "version": "1.0.0",
+      "author": "Nathan Krebs",
+      "path": "skills/asset-gen",
+      "has_readme": true,
+      "has_scripts": true
+    },
+    {
+      "name": "audit-project",
+      "description": "Analyze current project's Claude Code configuration and suggest improvements",
+      "version": "1.0.0",
+      "author": "Nathan Krebs",
+      "path": "skills/audit-project",
+      "has_readme": true,
+      "has_scripts": false
+    },
+    {
+      "name": "scaffold-skill",
+      "description": "Generate a new skill from a template with proper structure, frontmatter, and boilerplate files. Use when creating a new skill to ensure it follows conventions.",
+      "version": "1.0.0",
+      "author": "Nathan Krebs",
+      "path": "skills/scaffold-skill",
+      "has_readme": false,
+      "has_scripts": false
+    },
+    {
+      "name": "scan-secrets",
+      "description": "Run security scan on skills or directories to detect API keys, tokens, passwords, personal paths, and other sensitive data. Use before pushing skills or committing code.",
+      "version": "1.0.0",
+      "author": "Nathan Krebs",
+      "path": "skills/scan-secrets",
+      "has_readme": false,
+      "has_scripts": false
+    },
+    {
+      "name": "sync-skills",
+      "description": "Bidirectional sync between local Claude Code skills (~/.claude/skills/) and the GithubSkills repository. Use when you need to push local skills to the repo, pull repo skills to local, or check sync status.",
+      "version": "1.0.0",
+      "author": "Nathan Krebs",
+      "path": "skills/sync-skills",
+      "has_readme": true,
+      "has_scripts": true
+    },
+    {
+      "name": "validate-skills",
+      "description": "Validate all skills in the repository for proper structure, frontmatter, naming conventions, and required files. Use when you need to check skill quality before publishing or after making changes.",
+      "version": "1.0.0",
+      "author": "Nathan Krebs",
+      "path": "skills/validate-skills",
+      "has_readme": false,
+      "has_scripts": false
+    }
+  ]
+}
