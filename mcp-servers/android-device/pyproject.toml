@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "android-device-mcp"
+version = "0.1.0"
+description = "MCP server for Android device interaction - screenshots, automation, debugging"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "nathankrebs" }
+]
+keywords = ["android", "mcp", "automation", "testing", "adb", "claude"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "uiautomator2>=3.0.0",
+    "Pillow>=10.0.0",
+    "aiofiles>=23.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+android-device-mcp = "android_device_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/nathankrebs/ClaudeCodeSkills"
+Repository = "https://github.com/nathankrebs/ClaudeCodeSkills"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/android_device_mcp"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I", "UP", "B", "C4"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
